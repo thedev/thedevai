@@ -42,7 +42,20 @@ The built files will be in the `public/` directory.
 
 ## 🚢 Deploy to GitHub Pages
 
-Deploy your site to GitHub Pages:
+### Automatic Deployment (Recommended)
+
+The site automatically deploys to GitHub Pages when you push to the `main` branch using GitHub Actions.
+
+**First-time setup:**
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" section
+3. Under "Build and deployment", set the source to "GitHub Actions"
+4. Push to the `main` branch and the site will automatically deploy
+5. Your site will be published at `https://thedev.github.io/thedevai/`
+
+### Manual Deployment
+
+You can also deploy manually using:
 ```bash
 npm run deploy
 ```
@@ -52,17 +65,16 @@ This command will:
 2. Deploy to the `gh-pages` branch
 3. Make your site available at `https://thedev.github.io/thedevai/`
 
-### GitHub Pages Setup
-
-1. Go to your repository settings on GitHub
-2. Navigate to "Pages" section
-3. Set the source to deploy from the `gh-pages` branch
-4. Your site will be published at `https://thedev.github.io/thedevai/`
+**Note:** If using manual deployment, set GitHub Pages source to deploy from the `gh-pages` branch instead of GitHub Actions.
 
 ## 📁 Project Structure
 
 ```
 thedevai/
+├── .github/
+│   └── workflows/      # GitHub Actions workflows
+│       ├── deploy.yml  # Auto-deploy to GitHub Pages
+│       └── pr-check.yml # Build and test PRs
 ├── src/
 │   ├── pages/          # Page components
 │   │   ├── index.js    # Home page

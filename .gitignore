@@ -59,9 +59,13 @@ typings/
 .env.test
 .env.production
 
-# gatsby files
-.cache/
-public
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
 
 # Mac files
 .DS_Store

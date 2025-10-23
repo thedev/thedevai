@@ -1,0 +1,23 @@
+# Jekyll configuration for TheDev.ai
+
+title: TheDev.ai
+description: Scalable enterprise software solutions from TheDev.ai, London, delivering robust, high-performance systems with proven results.
+url: https://thedev.ai
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - SETUP_SUMMARY.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

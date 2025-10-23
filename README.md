@@ -1,13 +1,13 @@
-# TheDev AI - Gatsby Starter Project
+# TheDev.ai - Enterprise Software Solutions
 
-A Gatsby starter project configured for GitHub Pages deployment.
+A Jekyll-based website for TheDev.ai, deployed on GitHub Pages with a custom domain.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18.x or later
-- npm or yarn
+- Ruby 3.2 or later
+- Bundler
 
 ### Installation
 
@@ -19,26 +19,26 @@ cd thedevai
 
 2. Install dependencies:
 ```bash
-npm install
+bundle install
 ```
 
 ### Development
 
 Start the development server:
 ```bash
-npm run develop
+bundle exec jekyll serve
 ```
 
-Your site will be running at `http://localhost:8000`
+Your site will be running at `http://localhost:4000`
 
 ## 📦 Build
 
 Build the site for production:
 ```bash
-npm run build
+bundle exec jekyll build
 ```
 
-The built files will be in the `public/` directory.
+The built files will be in the `_site/` directory.
 
 ## 🚢 Deploy to GitHub Pages
 
@@ -46,81 +46,66 @@ The built files will be in the `public/` directory.
 
 The site automatically deploys to GitHub Pages when you push to the `main` branch using GitHub Actions.
 
-**First-time setup:**
+**Setup:**
 1. Go to your repository settings on GitHub
 2. Navigate to "Pages" section
 3. Under "Build and deployment", set the source to "GitHub Actions"
 4. Push to the `main` branch and the site will automatically deploy
-5. Your site will be published at `https://thedev.github.io/thedevai/`
+5. Your site will be published at `https://thedev.ai`
 
-### Manual Deployment
-
-You can also deploy manually using:
-```bash
-npm run deploy
-```
-
-This command will:
-1. Build the site with the correct path prefix
-2. Deploy to the `gh-pages` branch
-3. Make your site available at `https://thedev.github.io/thedevai/`
-
-**Note:** If using manual deployment, set GitHub Pages source to deploy from the `gh-pages` branch instead of GitHub Actions.
+The custom domain `thedev.ai` is configured via the `CNAME` file in the repository root.
 
 ## 📁 Project Structure
 
 ```
 thedevai/
 ├── .github/
-│   └── workflows/      # GitHub Actions workflows
-│       ├── deploy.yml  # Auto-deploy to GitHub Pages
+│   └── workflows/       # GitHub Actions workflows
+│       ├── deploy.yml   # Auto-deploy to GitHub Pages
 │       └── pr-check.yml # Build and test PRs
-├── src/
-│   ├── pages/          # Page components
-│   │   ├── index.js    # Home page
-│   │   └── 404.js      # 404 page
-│   └── components/     # Reusable components
-├── gatsby-config.js    # Gatsby configuration
-├── package.json        # Dependencies and scripts
-└── README.md          # This file
+├── _config.yml          # Jekyll configuration
+├── CNAME                # Custom domain configuration
+├── index.html           # Home page
+├── 404.html            # 404 error page
+└── README.md           # This file
 ```
 
-## 🛠️ Available Scripts
+## 🛠️ Available Commands
 
-- `npm run develop` - Start development server
-- `npm run build` - Build for production
-- `npm run serve` - Serve production build locally
-- `npm run clean` - Clean cache and public directories
-- `npm run deploy` - Deploy to GitHub Pages
+- `bundle exec jekyll serve` - Start development server
+- `bundle exec jekyll build` - Build for production
+- `bundle exec jekyll clean` - Clean build artifacts
 
 ## 📝 Customization
 
 ### Update Site Metadata
 
-Edit `gatsby-config.js` to customize your site:
+Edit `_config.yml` to customize your site:
 
-```javascript
-module.exports = {
-  pathPrefix: "/thedevai",  // Change to your repo name
-  siteMetadata: {
-    title: `Your Site Title`,
-    description: `Your site description`,
-    author: `@yourhandle`,
-  },
-  plugins: [],
-}
+```yaml
+title: TheDev.ai
+description: Your site description
+url: https://thedev.ai
 ```
 
 ### Add New Pages
 
-Create new pages by adding files to `src/pages/`:
-- `src/pages/about.js` → `/about`
-- `src/pages/blog/index.js` → `/blog`
+Create new HTML or Markdown files in the root directory:
+- `about.html` → `/about`
+- `blog.html` → `/blog`
+
+### Custom Domain
+
+The custom domain is configured in the `CNAME` file. To change it:
+1. Edit the `CNAME` file
+2. Configure your DNS settings to point to GitHub Pages
+3. Update the `url` in `_config.yml`
 
 ## 📚 Learn More
 
-- [Gatsby Documentation](https://www.gatsbyjs.com/docs/)
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [GitHub Pages Custom Domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 ## 📄 License
 

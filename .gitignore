@@ -64,6 +64,9 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
 
 # Mac files
 .DS_Store

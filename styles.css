@@ -57,3 +57,7 @@
   /* Optional: smooth transition if you want to move the hole */
   transition: mask-position 0.3s, -webkit-mask-position 0.3s;
 }
+
+.dots .bg-zinc-700.bg-white {
+    background-color: white;
+}

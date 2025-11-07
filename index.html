@@ -63,9 +63,11 @@
         <div class="overlay absolute inset-0 pointer-events-none"></div>
         <div class="container mx-auto px-4">
             <div class="pl-[50%] text-left relative">
-                <h2 class="text-shadow-lg text-4xl md:text-5xl font-bold mb-8">Robust Software,<br/>Built to Scale</h2>
-                <p class="text-shadow-sm text-lg md:text-xl mb-12 max-w-2xl mx-auto">Based in London, TheDev.ai delivers enterprise-grade
-                    solutions with precision and reliability, designed to perform under the toughest conditions, from cloud
+                <h2 class="text-shadow-lg text-4xl md:text-5xl font-bold mb-8">Robust Software,<br />Built to Scale</h2>
+                <p class="text-shadow-sm text-lg md:text-xl mb-12 max-w-2xl mx-auto">Based in London, TheDev.ai delivers
+                    enterprise-grade
+                    solutions with precision and reliability, designed to perform under the toughest conditions, from
+                    cloud
                     to edge.</p>
                 <a href="#contact"
                     class="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Start Your
@@ -206,38 +208,38 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
 
-            <div id="slider" class="relative w-full max-w-4xl mx-auto overflow-hidden select-none">
-                <div id="items" class="flex transition-transform duration-500 ease-out">
-                    <!-- Slides -->
-                    <div class="slide min-w-full flex-shrink-0 p-6">
-                        <div class="bg-zinc-900 rounded-2xl p-8 text-center flex flex-col justify-center h-full">
+            <div class="r-carousel relative w-full max-w-4xl mx-auto overflow-hidden select-none">
+                <div class="wrapper flex transition-transform duration-300 ease-in-out">
+                    <div
+                        class="slide flex-shrink-0 w-full py-6 px-24 bg-pink-600 text-white rounded-xl text-center justify-center">
+                        <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Scalable Architecture</h3>
                             <p>Transform prototypes into robust production systems with rigorous control and
                                 observability.</p>
                         </div>
                     </div>
-                    <div class="slide min-w-full flex-shrink-0 p-6">
-                        <div class="bg-zinc-900 rounded-2xl p-8 text-center flex flex-col justify-center h-full">
+                    <div class="slide flex-shrink-0 w-full p-6 bg-pink-500 text-white rounded-xl text-center">
+                        <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Measurable Outcomes</h3>
                             <p>Deliver projects with clear KPIs to ensure tangible business impact and ROI.</p>
                         </div>
                     </div>
-                    <div class="slide min-w-full flex-shrink-0 p-6">
-                        <div class="bg-zinc-900 rounded-2xl p-8 text-center flex flex-col justify-center h-full">
+                    <div class="slide flex-shrink-0 w-full p-6 bg-pink-400 text-white rounded-xl text-center">
+                        <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Flexible Expertise</h3>
                             <p>Design tailored solutions across cloud, on-prem, and edge environments for lasting
                                 performance.</p>
                         </div>
                     </div>
-                    <div class="slide min-w-full flex-shrink-0 p-6">
-                        <div class="bg-zinc-900 rounded-2xl p-8 text-center flex flex-col justify-center h-full">
+                    <div class="slide flex-shrink-0 w-full p-6 bg-pink-300 text-white rounded-xl text-center">
+                        <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Disciplined Innovation</h3>
                             <p>Stay ahead of advancing technology through engineering discipline, focusing on proven
                                 innovations rather than fleeting trends.</p>
                         </div>
                     </div>
-                    <div class="slide min-w-full flex-shrink-0 p-6">
-                        <div class="bg-zinc-900 rounded-2xl p-8 text-center flex flex-col justify-center h-full">
+                    <div class="slide flex-shrink-0 w-full p-6 bg-pink-200 text-white rounded-xl text-center">
+                        <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Trusted Experience</h3>
                             <p>With over a decade as a Fractional CTO, TheDev.ai delivers reliable, scalable solutions
                                 for startups and global enterprises from London, leveraging AWS, Azure, and modern
@@ -246,25 +248,25 @@
                     </div>
                 </div>
 
-                <!-- Navigation Arrows -->
-                <button id="prev"
-                    class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
+                <!-- Dots -->
+                <ul class="dots flex justify-center mt-4 space-x-2"></ul>
+
+                <button
+                    class="btn-prev absolute left-2 top-1/2 -mt-[12px] -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button id="next"
-                    class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
+                <button
+                    class="btn-next absolute right-2 top-1/2 -mt-[12px] -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
-
-                <!-- Dots -->
-                <div id="dots" class="flex justify-center mt-4 space-x-2"></div>
             </div>
+
         </div>
         <div class='triangle absolute left-0 right-0 top-0 bg-zinc-200'></div>
     </section>

@@ -29,24 +29,9 @@
     clip-path: polygon( 100% 100%, 0 100%, 0 0);
 }
 
-.overlay {
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-mask-image: radial-gradient(circle 250px at 45% 55%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-composite: destination-out;
-  mask-image: radial-gradient(circle 250px at 45% 55%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-composite: subtract;
-  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
-}
-
 .dots .bg-zinc-700.bg-white {
     background-color: white;
 }
-
 
 .project-card {
   position: relative;
@@ -57,7 +42,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   overflow: hidden;
   transition: all 0.3s ease;
-    border: 2px solid transparent;
+  border: 2px solid transparent;
 }
 
 .project-card::before,
@@ -98,3 +83,7 @@
   box-shadow: 0 0 20px rgba(39, 39, 42, 0.4);
   /* transform: translateY(-4px); */
 }
+/* 
+#home, #home * {
+  border: 1px solid red;
+} */

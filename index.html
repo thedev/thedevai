@@ -31,11 +31,11 @@
 
                     <ul
                         class="fixed inset-0 flex flex-col items-center justify-center bg-zinc-900 space-y-8 text-xl transform translate-x-full transition-transform duration-500 peer-checked:translate-x-0">
-                        <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
-                        <li><a href="#solutions" class="hover:text-indigo-400">Solutions</a></li>
-                        <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
-                        <li><a href="#why-us" class="hover:text-indigo-400">Why Us</a></li>
-                        <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+                        <li><a href="#home" class="menu-link hover:text-indigo-400">Home</a></li>
+                        <li><a href="#solutions" class="menu-link hover:text-indigo-400">Solutions</a></li>
+                        <li><a href="#projects" class="menu-link hover:text-indigo-400">Projects</a></li>
+                        <li><a href="#why-us" class="menu-link hover:text-indigo-400">Why Us</a></li>
+                        <li><a href="https://www.linkedin.com/in/ionicaalexandru/" target='_blank' class="menu-link hover:text-indigo-400">Contact</a></li>
                     </ul>
 
                     <label for="menu-toggle"
@@ -69,8 +69,8 @@
             <div class="relative md:absolute order-2 px-4 md:px-0 md:order-1 top-0 left-0 w-full md:w-[50%] overflow-hidden md:top-[50%] md:[transform:translate(0,-50%)]">
                 <img src="./images/hero.jpg" alt="" class="w-full h-full object-contain"/>
                 <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-black to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-black to-transparent dark:from-black dark:to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-black to-transparent dark:from-black dark:to-transparent"></div>
                 </div>
             </div>
             <div class="relative px-4 order-1 md:order-2">
@@ -95,7 +95,7 @@
         <div class="container mx-auto px-4 relative">
             <h2 class="text-3xl font-bold text-center mb-12">Our Solutions</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -105,7 +105,7 @@
                     <p>Craft actionable roadmaps that align business goals with scalable, governed software
                         architectures.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -114,7 +114,7 @@
                     <h3 class="text-xl font-semibold mb-2">Cloud & Serverless Platforms</h3>
                     <p>Build high-performance systems on AWS, Azure, or GCP, optimized for global scalability.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -123,7 +123,7 @@
                     <h3 class="text-xl font-semibold mb-2">Edge & Embedded Systems</h3>
                     <p>Develop low-latency solutions for industrial applications like IoT and real-time operations.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -132,7 +132,7 @@
                     <h3 class="text-xl font-semibold mb-2">AI-Enhanced Applications</h3>
                     <p>Integrate secure, auditable AI to streamline workflows and enhance decision-making.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -142,7 +142,7 @@
                     <h3 class="text-xl font-semibold mb-2">DevOps & System Assurance</h3>
                     <p>Implement automated CI/CD pipelines and robust monitoring for reliable operations.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-md">
+                <div class="p-6 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -224,34 +224,34 @@
             <div class="r-carousel relative w-full max-w-4xl mx-auto overflow-hidden select-none">
                 <div class="wrapper flex transition-transform duration-300 ease-in-out">
                     <div
-                        class="slide flex-shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center justify-center">
+                        class="slide shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center justify-center">
                         <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Scalable Architecture</h3>
                             <p>Transform prototypes into robust production systems with rigorous control and
                                 observability.</p>
                         </div>
                     </div>
-                    <div class="slide flex-shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
+                    <div class="slide shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
                         <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Measurable Outcomes</h3>
                             <p>Deliver projects with clear KPIs to ensure tangible business impact and ROI.</p>
                         </div>
                     </div>
-                    <div class="slide flex-shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
+                    <div class="slide shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
                         <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Flexible Expertise</h3>
                             <p>Design tailored solutions across cloud, on-prem, and edge environments for lasting
                                 performance.</p>
                         </div>
                     </div>
-                    <div class="slide flex-shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
+                    <div class="slide shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
                         <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Disciplined Innovation</h3>
                             <p>Stay ahead of advancing technology through engineering discipline, focusing on proven
                                 innovations rather than fleeting trends.</p>
                         </div>
                     </div>
-                    <div class="slide flex-shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
+                    <div class="slide shrink-0 w-full py-6 px-24 bg-zinc-900 text-white rounded-xl text-center">
                         <div class='flex flex-col justify-center'>
                             <h3 class="text-2xl font-semibold mb-3">Trusted Experience</h3>
                             <p>With over a decade as a Fractional CTO, TheDev.ai delivers reliable, scalable solutions

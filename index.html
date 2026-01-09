@@ -1,297 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Scalable enterprise software solutions from TheDev.ai, London, delivering robust, high-performance systems with proven results.">
-    <title>thedev.ai - Scalable Software Solutions</title>
-    <link href="./styles.css" rel="stylesheet" media="screen">
+    <title>TheDev.ai | Scalable Software & Strategic Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#050505', surface: '#0F1113', accent: '#CCFF00', secondary: '#3A5AFF' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-grid { background-size: 60px 60px; background-image: linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px); }
+        .logo-filter { filter: grayscale(1) opacity(0.5); transition: all 0.4s; }
+        .logo-filter:hover { filter: grayscale(0) opacity(1); }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, #1a1e23 0%, #050505 100%); }
+    </style>
 </head>
+<body class="bg-brand-bg text-gray-300 font-sans antialiased">
 
-<body class="font-sans text-white-800 bg-gray-50">
-    <!-- Header -->
-    <header class="bg-black text-white py-4 sticky top-0 z-10">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold flex gap-4 items-center">
-                <img src='./images/logo.png' alt='TheDev' class='max-h-80 mx-auto' />
-                thedev.ai
+    <nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-mono text-xl font-bold text-white tracking-tighter">
+                <span class="text-brand-accent">//</span> TheDev.ai
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs font-mono uppercase tracking-widest">
+                <a href="#solutions" class="hover:text-brand-accent transition-colors">Solutions</a>
+                <a href="#projects" class="hover:text-brand-accent transition-colors">Results</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors">Expertise</a>
+            </div>
+            <a href="#contact" class="px-6 py-2 bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-all">
+                Get in Touch
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-24 hero-gradient overflow-hidden">
+        <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h1 class="text-6xl md:text-8xl font-bold text-white tracking-tighter leading-[0.85] mb-10">
+                Robust Software.<br />Built to <span class="text-brand-accent">Scale.</span>
             </h1>
-
-            <nav class="md:hidden relative">
-                <div class="relative nav-container">
-                    <input type="checkbox" id="menu-toggle" class="peer hidden" />
-
-                    <ul
-                        class="fixed inset-0 flex flex-col items-center justify-center bg-zinc-900 space-y-8 text-xl transform translate-x-full transition-transform duration-500 peer-checked:translate-x-0">
-                        <li><a href="#home" class="menu-link hover:text-indigo-400">Home</a></li>
-                        <li><a href="#solutions" class="menu-link hover:text-indigo-400">Solutions</a></li>
-                        <li><a href="#projects" class="menu-link hover:text-indigo-400">Projects</a></li>
-                        <li><a href="#why-us" class="menu-link hover:text-indigo-400">Why Us</a></li>
-                        <li><a href="https://www.linkedin.com/in/ionicaalexandru/" target='_blank' class="menu-link hover:text-indigo-400">Contact</a></li>
-                    </ul>
-
-                    <label for="menu-toggle"
-                        class="hamburger-lines flex flex-col justify-between w-8 h-6 cursor-pointer z-50 peer-checked:bg-black">
-                        <span
-                            class="line1 block h-[4px] w-full bg-gray-200 rounded transition-transform duration-300 origin-top-left"></span>
-                        <span
-                            class="line2 block h-[4px] w-full bg-gray-200 rounded transition-transform duration-300 origin-top-left"></span>
-                        <span
-                            class="line3 block h-[4px] w-full bg-gray-200 rounded transition-transform duration-300 origin-[0%_100%]"></span>
-                    </label>
-
-                </div>
-            </nav>
-
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8 text-gray-300">
-                    <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
-                    <li><a href="#solutions" class="hover:text-indigo-400">Solutions</a></li>
-                    <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
-                    <li><a href="#why-us" class="hover:text-indigo-400">Why Us</a></li>
-                    <li><a href="https://www.linkedin.com/in/ionicaalexandru/" target='_blank' class="hover:text-indigo-400">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-black text-white">
-        <div class="flex flex-col container px-4 relative mx-auto py-20 md:py-40">
-            <div class="relative md:absolute order-2 px-4 md:px-0 md:order-1 top-0 left-0 w-full md:w-[50%] overflow-hidden md:top-[50%] md:[transform:translate(0,-50%)]">
-                <img src="./images/hero.jpg" alt="" class="w-full h-full object-contain"/>
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-black to-transparent dark:from-black dark:to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-black to-transparent dark:from-black dark:to-transparent"></div>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12 font-light leading-relaxed">
+                Based in London, TheDev.ai delivers enterprise-grade solutions with precision and reliability. We bridge the gap between complex engineering and tangible business growth.
+            </p>
+            <div class="flex flex-wrap gap-12 items-center">
+                <a href="#contact" class="px-8 py-4 bg-brand-accent text-black font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+                    Start Your Project
+                </a>
+                <div class="flex items-center gap-4 border-l border-white/20 pl-8">
+                    <div class="flex -space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-bg flex items-center justify-center text-[10px] font-bold">L1</div>
+                        <div class="w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-bg flex items-center justify-center text-[10px] font-bold">L2</div>
+                        <div class="w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-bg flex items-center justify-center text-[10px] font-bold">L3</div>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 uppercase tracking-widest">Trusted by Industry Leaders</span>
                 </div>
             </div>
-            <div class="relative px-4 order-1 md:order-2">
-                <div class="md:pl-[50%] text-left relative">
-                    <h2 class="text-shadow-lg text-4xl md:text-5xl font-bold mb-8">Robust Software,<br />Built to Scale</h2>
-                    <p class="text-shadow-md text-lg md:text-xl mb-12">Based in London, TheDev.ai delivers
-                        enterprise-grade
-                        solutions with precision and reliability, designed to perform under the toughest conditions, from
-                        cloud
-                        to edge.</p>
-                    <a href="https://www.linkedin.com/in/ionicaalexandru/" target='_blank'
-                        class="bg-white inline-flex text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Start Your
-                        Project</a>
-                </div>
-            </div>
-        </div>
-        <div class='triangle triangle-left absolute left-0 right-0 bottom-0 bg-zinc-900'></div>
-    </section>
-
-    <!-- Solutions Section -->
-    <section id="solutions" class="relative bg-zinc-900 text-white py-20">
-        <div class="container mx-auto px-4 relative">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Solutions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">Enterprise Software Strategy</h3>
-                    <p>Craft actionable roadmaps that align business goals with scalable, governed software
-                        architectures.</p>
-                </div>
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">Cloud & Serverless Platforms</h3>
-                    <p>Build high-performance systems on AWS, Azure, or GCP, optimized for global scalability.</p>
-                </div>
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">Edge & Embedded Systems</h3>
-                    <p>Develop low-latency solutions for industrial applications like IoT and real-time operations.</p>
-                </div>
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">AI-Enhanced Applications</h3>
-                    <p>Integrate secure, auditable AI to streamline workflows and enhance decision-making.</p>
-                </div>
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">DevOps & System Assurance</h3>
-                    <p>Implement automated CI/CD pipelines and robust monitoring for reliable operations.</p>
-                </div>
-                <div class="p-6 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-3" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                    </svg>
-                    <h3 class="text-xl font-semibold mb-2">Data Systems Modernization</h3>
-                    <p>Unify data architectures to power secure, high-performance applications.</p>
-                </div>
-            </div>
-            <!-- <div class="absolute bottom-0 right-0 w-48 h-48 bg-blue-500 transform rotate-45 origin-bottom-right"></div> -->
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="relative bg-black text-white py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Proven Results</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-zinc-900 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Enterprise AI Modernization</h3>
-                    <p>Accelerated enterprise modernization with OpenAI solutions, delivering scalable, secure systems
-                        for data-driven operations.</p>
+    <section id="solutions" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-6">
+                    <div class="w-12 h-[2px] bg-brand-accent"></div>
+                    <h3 class="text-2xl font-bold text-white">Cloud & Platforms</h3>
+                    <p class="text-gray-400 leading-relaxed">High-performance systems built on AWS, Azure, or GCP, optimized for global scalability and governance.</p>
                 </div>
-                <div class="project-card bg-zinc-900 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Global Streaming API</h3>
-                    <p>Developed a Playback API handling 30k RPS, driving £600M in annual revenue with microservices and
-                        AWS.</p>
+                <div class="space-y-6">
+                    <div class="w-12 h-[2px] bg-brand-accent"></div>
+                    <h3 class="text-2xl font-bold text-white">AI Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">Move beyond the hype with secure, auditable AI applications designed to streamline mission-critical workflows.</p>
                 </div>
-                <div class="project-card bg-zinc-900 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Real-Time Scheduling System</h3>
-                    <p>Created an 'Uber'-style solution with .NET and SignalR, doubling technician productivity and
-                        reducing errors.</p>
-                </div>
-                <div class="project-card bg-zinc-900 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">AI-Ready Creative Analytics Platform</h3>
-                    <p>Designed a cloud-based platform for pre-flight testing, leveraging AWS, Azure, and GCP for
-                        robust, scalable performance.</p>
-                </div>
-                <div class="project-card bg-zinc-900 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Serverless AWS Messaging Platform</h3>
-                    <p>Built a scalable AWS platform in 3 months using Node.js and Terraform, enabling unlimited user
-                        growth and enhanced performance.</p>
+                <div class="space-y-6">
+                    <div class="w-12 h-[2px] bg-brand-accent"></div>
+                    <h3 class="text-2xl font-bold text-white">Edge Computing</h3>
+                    <p class="text-gray-400 leading-relaxed">Low-latency solutions for industrial IoT and real-time operations where every millisecond counts.</p>
                 </div>
             </div>
         </div>
-        <div class='triangle absolute left-0 right-0 top-0 bg-zinc-900'></div>
     </section>
 
-    <!-- Clients Section -->
-    <section id="clients-image" class="relative bg-zinc-200 text-black py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Clients</h2>
-            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-4">
-                <div class="p-6 rounded-lg flex items-center">
-                    <img src='./images/belron_logo.svg' alt='' class='max-h-[60px] mx-auto' />
+    <section id="about" class="py-24 bg-brand-surface">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-brand-bg p-8 md:p-16 border border-white/5 flex flex-col md:flex-row items-center gap-16 relative overflow-hidden">
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 grayscale">
+                    <img src="https://via.placeholder.com/300x300/111/fff?text=ALEX" alt="Alex" class="w-full h-full object-cover border border-white/10">
                 </div>
-                <div class="p-6 rounded-lg flex items-center">
-                    <img src='./images/dazn_logo.svg' alt='' class='max-h-20 mx-auto' />
+                <div class="relative z-10">
+                    <h2 class="font-mono text-brand-accent text-sm mb-4 tracking-[0.3em] uppercase underline underline-offset-8">Lead Architect & Founder</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Strategy Driven by Experience.</h3>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Every engagement at TheDev.ai is led personally by **Alex**, a veteran Fractional CTO with over a decade of experience. He ensures that high-level engineering always serves your bottom line. 
+                    </p>
+                    <p class="text-gray-500 italic mb-8 max-w-xl text-sm">
+                        "We don't just build software for today; we architect assets that increase in value as your business grows."
+                    </p>
+                    <div class="flex gap-6 items-center">
+                        <img src="https://via.placeholder.com/100x30/000/fff?text=SIGNATURE" alt="Signature" class="h-8 opacity-50 invert">
+                        <span class="text-xs font-mono text-gray-600 uppercase">Founder, TheDev.ai</span>
+                    </div>
                 </div>
-                <div class="p-6 rounded-lg flex items-center">
-                    <img src='./images/ef_logo.svg' class='max-h-20 mx-auto' alt='' />
+                <div class="absolute -right-20 -bottom-20 text-[200px] font-bold text-white/[0.02] pointer-events-none select-none italic">ALEX</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
+                <div class="bg-brand-bg p-12">
+                    <span class="text-xs font-mono text-brand-secondary mb-4 block tracking-widest uppercase">Streaming API</span>
+                    <h4 class="text-4xl font-bold text-white mb-4">30k RPS</h4>
+                    <p class="text-gray-400">Architected a backbone for a streaming service driving £600M in annual revenue with 99.99% uptime.</p>
                 </div>
-                <div class="p-6 rounded-lg flex items-center">
-                    <img src='./images/yougov_logo.svg' class='max-h-20 mx-auto' alt='' />
-                </div>
-                <div class="p-6 rounded-lg flex items-center">
-                    <img src='./images/mongo_logo.svg' class='max-h-20 mx-auto' alt='' />
+                <div class="bg-brand-bg p-12">
+                    <span class="text-xs font-mono text-brand-secondary mb-4 block tracking-widest uppercase">Productivity</span>
+                    <h4 class="text-4xl font-bold text-white mb-4">200% Increase</h4>
+                    <p class="text-gray-400">Deployed a real-time 'Uber-style' logistics system that doubled output for a national service provider.</p>
                 </div>
             </div>
         </div>
-        <div class='triangle absolute left-0 right-0 top-0 bg-black'></div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="relative bg-black text-white py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
-
-            <div class="r-carousel relative w-full max-w-4xl mx-auto overflow-hidden select-none">
-                <div class="wrapper flex transition-transform duration-300 ease-in-out">
-                    <div
-                        class="slide shrink-0 w-full py-6 px-16 bg-zinc-900 text-white rounded-xl text-center flex">
-                        <div class='m-auto'>
-                            <h3 class="text-2xl font-semibold mb-3">Scalable Architecture</h3>
-                            <p>Transform prototypes into robust production systems with rigorous control and
-                                observability.</p>
-                        </div>
-                    </div>
-                    <div class="slide shrink-0 w-full py-6 px-16 bg-zinc-900 text-white rounded-xl text-center flex">
-                        <div class='m-auto'>
-                            <h3 class="text-2xl font-semibold mb-3">Measurable Outcomes</h3>
-                            <p>Deliver projects with clear KPIs to ensure tangible business impact and ROI.</p>
-                        </div>
-                    </div>
-                    <div class="slide shrink-0 w-full py-6 px-16 bg-zinc-900 text-white rounded-xl text-center flex">
-                        <div class='m-auto'>
-                            <h3 class="text-2xl font-semibold mb-3">Flexible Expertise</h3>
-                            <p>Design tailored solutions across cloud, on-prem, and edge environments for lasting
-                                performance.</p>
-                        </div>
-                    </div>
-                    <div class="slide shrink-0 w-full py-6 px-16 bg-zinc-900 text-white rounded-xl text-center flex">
-                        <div class='m-auto'>
-                            <h3 class="text-2xl font-semibold mb-3">Disciplined Innovation</h3>
-                            <p>Stay ahead of advancing technology through engineering discipline, focusing on proven
-                                innovations rather than fleeting trends.</p>
-                        </div>
-                    </div>
-                    <div class="slide shrink-0 w-full py-6 px-16 bg-zinc-900 text-white rounded-xl text-center flex">
-                        <div class='m-auto'>
-                            <h3 class="text-2xl font-semibold mb-3">Trusted Experience</h3>
-                            <p>With over a decade as a Fractional CTO, TheDev.ai delivers reliable, scalable solutions
-                                for startups and global enterprises from London, leveraging AWS, Azure, and modern
-                                DevOps practices.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dots -->
-                <ul class="dots flex justify-center mt-4 space-x-2"></ul>
-
-                <button
-                    class="btn-prev absolute left-2 top-1/2 -mt-[12px] -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button
-                    class="btn-next absolute right-2 top-1/2 -mt-[12px] -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+    <section class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-16 md:gap-24 items-center opacity-50 grayscale">
+                <img src="https://via.placeholder.com/100x40/000/fff?text=CLIENT+1" alt="Client 1" class="h-6">
+                <img src="https://via.placeholder.com/100x40/000/fff?text=CLIENT+2" alt="Client 2" class="h-6">
+                <img src="https://via.placeholder.com/100x40/000/fff?text=CLIENT+3" alt="Client 3" class="h-6">
+                <img src="https://via.placeholder.com/100x40/000/fff?text=CLIENT+4" alt="Client 4" class="h-6">
             </div>
-
         </div>
-        <div class='triangle absolute left-0 right-0 top-0 bg-zinc-200'></div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-zinc-900 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 thedev.ai, London, UK. All rights reserved.</p>
+    <section id="contact" class="py-24 bg-brand-accent text-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="max-w-xl">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Ready to engineer your edge?</h2>
+                <p class="text-lg font-medium opacity-80 leading-relaxed">Schedule a direct technical consultation with Alex to discuss your project roadmap.</p>
+            </div>
+            <a href="mailto:alex@thedev.ai" class="px-12 py-6 bg-black text-white font-bold uppercase tracking-widest text-lg hover:scale-110 transition-transform">
+                Book Consultation
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-[10px] font-mono tracking-widest uppercase">
+            <div>© 2025 TheDev.ai // London, UK</div>
+            <div class="flex gap-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+            </div>
         </div>
     </footer>
 
-    <script src='./index.js'></script>
 </body>
-
 </html>

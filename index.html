@@ -22,8 +22,13 @@
     </script>
     <style>
         .bg-grid { background-size: 60px 60px; background-image: linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px); }
-        .logo-filter { filter: grayscale(1) opacity(0.5); transition: all 0.4s; }
-        .logo-filter:hover { filter: grayscale(0) opacity(1); }
+        /* Improved filter: forces white and handles opacity */
+        .logo-item { 
+            filter: brightness(0) invert(1); 
+            opacity: 0.4; 
+            transition: all 0.4s ease; 
+        }
+        .logo-item:hover { opacity: 1; }
         .hero-gradient { background: radial-gradient(circle at 50% 50%, #1a1e23 0%, #050505 100%); }
     </style>
 </head>
@@ -70,6 +75,30 @@
         </div>
     </section>
 
+    <section class="py-20 border-t border-white/5 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+                
+                <div class="w-32 flex justify-center">
+                    <img src="images/belron_logo.svg" alt="Belron" class="logo-item max-h-7 w-auto">
+                </div>
+
+                <div class="w-32 flex justify-center">
+                    <img src="images/dazn_logo.svg" alt="DAZN" class="logo-item max-h-6 w-auto">
+                </div>
+
+                <div class="w-32 flex justify-center">
+                    <img src="images/ef_logo.svg" alt="EF Education First" class="logo-item max-h-10 w-auto">
+                </div>
+
+                <div class="w-32 flex justify-center">
+                    <img src="images/yougov_logo.svg" alt="YouGov" class="logo-item max-h-8 w-auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="solutions" class="py-24 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -108,7 +137,6 @@
                         "We don't just build software for today; we architect assets that increase in value as your business grows."
                     </p>
                     <div class="flex gap-6 items-center">
-                        <!-- <img src="https://via.placeholder.com/100x30/000/fff?text=SIGNATURE" alt="Signature" class="h-8 opacity-50 invert"> -->
                         <span class="text-xs font-mono text-gray-600 uppercase">Founder, TheDev.ai</span>
                     </div>
                 </div>
@@ -134,23 +162,12 @@
                     <span class="text-xs font-mono text-brand-secondary mb-4 block tracking-widest uppercase">AI Innovation</span>
                     <h4 class="text-4xl font-bold text-white mb-4">40% Faster</h4>
                     <p class="text-gray-400">Drove OpenAI solution innovation, accelerating enterprise modernization, AI adoption, and cloud migration strategies with MongoDB integration.</p>
-                </div>                            
+                </div>                                            
                 <div class="bg-brand-bg p-12">
                     <span class="text-xs font-mono text-brand-secondary mb-4 block tracking-widest uppercase">MLOps Platform</span>
                     <h4 class="text-4xl font-bold text-white mb-4">1M+ Workflows</h4>
                     <p class="text-gray-400">Designed multi-cloud AI-ready enterprise platforms (AWS, Azure, GCP) for creative analytics, powering model training & MLOps operations at massive scale.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex flex-wrap justify-center gap-16 md:gap-24 items-center opacity-50 grayscale">
-                <img src="images/belron_logo.svg" alt="Belron" class="h-6">
-                <img src="images/dazn_logo.svg" alt="DAZN" class="h-6">
-                <img src="images/ef_logo.svg" alt="EF Education First" class="h-6">
-                <img src="images/yougov_logo.svg" alt="YouGov" class="h-6">
             </div>
         </div>
     </section>
@@ -169,7 +186,7 @@
 
     <footer class="py-12 bg-black border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-[10px] font-mono tracking-widest uppercase">
-            <div>© 2025 TheDev.ai // London, UK</div>
+            <div>© 2026 TheDev.ai // London, UK</div>
             <div class="flex gap-8 mt-4 md:mt-0">
                 <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                 <a href="#" class="hover:text-white transition-colors">Privacy</a>
